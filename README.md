@@ -65,7 +65,7 @@ REVISION: "A"
 To start the app, simply run:
 
 ```bash
-python weather-app.py
+python weather-app.pyw
 ```
 
 The screen will initialize automatically, connect to the weather API, and begin updating weather information at the configured interval.
