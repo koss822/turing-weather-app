@@ -35,8 +35,8 @@ The original codebase and display hardware interface come from the open-source [
 1. Clone or download this repository:
 
 ```bash
-git clone https://github.com/yourusername/weather-app-smart-screen.git
-cd weather-app-smart-screen
+git clone git@github.com:koss822/turing-weather-app.git
+cd turing-weather-app
 ```
 
 2. Install the dependencies:
@@ -101,13 +101,4 @@ Example simulated screen output:
 ## Credits
 
 This project is a **fork** of the open-source [turing-smart-screen-python](https://github.com/mathoudebine/turing-smart-screen-python) by **mathoudebine**, modified to display weather data using modern weather APIs.
-
-***
-
-Would you like the rewritten README to include a **"Configuration keys table"** (explaining each YAML field in a concise table format)? It would make it easier for users to understand available options.
-<span style="display:none">[^1]</span>
-
-<div align="center">⁂</div>
-
-[^1]: README.md
 
