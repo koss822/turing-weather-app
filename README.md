@@ -16,6 +16,8 @@ You can use this as a **standalone weather dashboard** or embed it as part of la
 
 The original codebase and display hardware interface come from the open-source [turing-smart-screen-python](https://github.com/mathoudebine/turing-smart-screen-python) project, adapted here for weather visualization and simpler operation.
 
+<img src="res/docs/weather.jpg"/> 
+
 ***
 
 ## Features
