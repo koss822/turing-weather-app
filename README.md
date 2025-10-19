@@ -18,6 +18,8 @@ The original codebase and display hardware interface come from the open-source [
 
 <img src="res/docs/weather.jpg"/> 
 
+<img src="res/docs/aliexpress.png"/> 
+
 ***
 
 ## Features
