@@ -91,15 +91,6 @@ You can adjust:
 
 ***
 
-## Screenshot Examples
-
-*(Optional: Add your screenshots here)*
-
-Example simulated screen output:
-`res/example-weather-display.png`
-
-***
-
 ## Credits
 
 This project is a **fork** of the open-source [turing-smart-screen-python](https://github.com/mathoudebine/turing-smart-screen-python) by **mathoudebine**, modified to display weather data using modern weather APIs.
