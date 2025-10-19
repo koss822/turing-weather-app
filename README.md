@@ -9,7 +9,7 @@ All names and trademarks belong to their respective owners.
 
 ## Overview
 
-This project is a **Python-based weather display application** for the **Turing Smart Screen hardware**, using data fetched from a **weather API**.
+This project is a **Python-based weather display application** for the **Turing Smart Screen hardware**, using data fetched from a **weather API** ([openweathermap.org)](https://openweathermap.org).
 It retains compatibility with the Turing Smart Screen architecture while replacing system monitoring features with real-time weather displays.
 
 You can use this as a **standalone weather dashboard** or embed it as part of larger projects that use the screen as a micro display.

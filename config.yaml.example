@@ -1,10 +1,11 @@
 screen_brightness: 50
+# openweathermap.org
 api_key: ""
 # hr24 sets 24 hour clock, degc sets celsius
 hr24: true
 degc: true
 # d_weather = number of minutes between weather updates. default 5, minimum 2
-d_weather: 5
+d_weather: 30
 # Set your COM port e.g. COM3 for Windows, /dev/ttyACM0 for Linux, etc. or "AUTO" for auto-discovery
 # COM_PORT = "/dev/ttyACM0"
 # COM_PORT = "COM5"
