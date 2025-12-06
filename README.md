@@ -61,6 +61,62 @@ COM_PORT: "AUTO"
 REVISION: "A"
 ```
 
+## Raspberry Pi 4 Installation (Ubuntu)
+1. Installation
+
+```bash
+git clone https://github.com/koss822/turing-weather-app.git
+cd turing-weather-app/
+sudo apt install libdrm-dev libdrm-amdgpu1 libdrm-common pkg-config python3-dev python3 build-essential
+python3 -m venv .
+. bin/activate
+python3 -m pip install -r requirements.txt
+python3 -m pip install geocoder
+sudo dmesg | grep usbmonitor -i -A5 -B5
+sudo vi /etc/udev/rules.d/99-usb-turing.rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+sudo vi /etc/systemd/system/turing-weather-app.service
+sudo systemctl daemon-reload
+sudo systemctl enable --now turing-weather-app.service
+```
+
+2. 99-usb-turing.rules (change YOUR_USER)
+```
+# Turing UsbMonitor (VID:1a86 PID:5722) -> /dev/ttyACM-Turing
+KERNEL=="ttyACM*", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="5722", ATTRS{serial}=="USB35INCHIPSV2", \
+SYMLINK+="ttyACM-Turing", OWNER="YOUR_USER", GROUP="dialout", MODE="0666"
+```
+
+3. /etc/systemd/system/turing-weather-app.service (change YOUR_USER)
+```
+[Unit]
+Description=Turing Weather App
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=YOUR_USER
+Group=YOUR_USER
+WorkingDirectory=/home/YOUR_USER/turing-weather-app
+Environment=PATH=/home/YOUR_USER/turing-weather-app/bin
+ExecStart=/home/YOUR_USER/turing-weather-app/bin/python weather-app.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+4. Configure your settings in `config.yaml`:
+
+```yaml
+...
+COM_PORT: "/dev/ttyACM-Turing"
+...
+```
+
 
 ***
 
